@@ -1,0 +1,41 @@
+
+html {
+	height:100%;
+}
+
+body {
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+#reset-btn {
+	background-color:white;
+	position: absolute;
+	font-size: 30px;
+	padding: 10px;
+	top: 2%;
+	border: 1px solid red;
+	border-radius: 50px;
+}
+
+#reset-btn:hover {
+	background-color:rgba(255, 0, 0, 0.6);
+	color: white;
+}
+
+
+
+
+.hovered {
+	background-color: aqua;
+}
