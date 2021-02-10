@@ -18,6 +18,11 @@ function createGrid(number=16) {
 
 	let squares = number** 2
 
+	createSquares(squares);
+	
+}
+
+function createSquares(squares) {
 	for (let i = 0; i < squares; i++) {
 	
 		let square = document.createElement('div');
@@ -30,8 +35,7 @@ function createGrid(number=16) {
 		container.appendChild(square);
 		
 	}
-}
-
+};
 
 function createGridCSS(number) {
 
@@ -40,7 +44,7 @@ function createGridCSS(number) {
 	let squareRule = `.square {
 		width: ${size}px;
 		height: ${size}px;
-		background-color: grey ;
+		background-color: rgb(226, 226, 226) ;
 	}`
 
 	styleSheet.insertRule(squareRule, 0);
@@ -50,12 +54,6 @@ function createGridCSS(number) {
 		grid-template-rows: repeat(${number}, ${size}px); }`
 	
 	styleSheet.insertRule(gridRule, 0);
-
-	/* "#grid-container { width: 480px; height: 480px; display: grid; 
-	align-content: center; grid-template-columns: repeat(16, 30px); 
-	grid-template-rows: repeat(16, 30px); }" */
-
-
 
 	/* 
 	styleSheet.insertRule(cssText, index) 
@@ -89,8 +87,6 @@ btn.addEventListener('click', () => {
 	deleteGridCSS();
 
 	let quantity = parseInt(prompt("How many squares per side would you like?"));
-	console.log(quantity);
-	console.log(typeof quantity);
 
 	while (isNaN(quantity) || typeof quantity !== "number" || quantity > 100) {
 		quantity = parseInt(prompt("Please introduce a number. The limit is 100"))

@@ -26,6 +26,7 @@ body {
 	top: 2%;
 	border: 1px solid red;
 	border-radius: 50px;
+	outline: none;
 }
 
 #reset-btn:hover {
@@ -37,5 +38,5 @@ body {
 
 
 .hovered {
-	background-color: aqua;
+	background-color: black;
 }
